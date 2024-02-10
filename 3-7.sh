@@ -1,14 +1,14 @@
 #!/bin/bash
 
 #check number of arguments
-if [[ ! -n "$3" ]]; then
+if [[ ! -n "$2" ]]; then
   echo "wrong number of arguments"
   exit 1
 fi
 
-prefix=$1
-start=$2
-end=$3
+read prefix
+start=$1
+end=$2
 
 #check that end>start
 if [[ $end -lt $start ]]; then
