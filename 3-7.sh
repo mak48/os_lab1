@@ -16,8 +16,10 @@ if [[ $end -lt $start ]]; then
   exit 1
 fi
 
+for (( i=$start; i<=$end; i++ ))
+do
 password=$(pwgen 8 1)
-echo "${prefix}_${start}${end},${password}" >> users.csv
-
+echo "${prefix}_${i},${password}" >> users.csv
+done
 echo "succesfully"
 exit 0
